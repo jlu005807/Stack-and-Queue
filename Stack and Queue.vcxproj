@@ -130,6 +130,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Queue of Stack.h" />
+    <ClInclude Include="Queue_Link.h" />
+    <ClInclude Include="Queue_Seq.h" />
     <ClInclude Include="Share_Stack.h" />
     <ClInclude Include="Stack_Link.h" />
     <ClInclude Include="Stack_Seq.h" />
