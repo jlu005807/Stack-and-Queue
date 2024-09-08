@@ -114,6 +114,7 @@ public:
 			Stack_Node<T>* p = this->top;
 			this->top = this->top->next;
 			delete p;
+			p = nullptr;
 		}
 		this->size = 0;
 	}

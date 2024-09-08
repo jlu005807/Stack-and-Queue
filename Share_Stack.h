@@ -143,6 +143,8 @@ public:
 		this->top[1] = this->capcity;
 
 		delete[]base;
+		
+		base = nullptr;
 
 	}
 

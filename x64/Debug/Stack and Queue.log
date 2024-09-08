@@ -1,7 +1,7 @@
 ﻿  main.cpp
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(279,1): warning C4715: “Share_Stack<int>::Pop”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(316,1): warning C4715: “operator<<<int>”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(194,1): warning C4715: “Share_Stack<int>::IsEmpty”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(233,1): warning C4715: “Share_Stack<int>::GetTop”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(257,1): warning C4715: “Share_Stack<int>::Push”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(318,1): warning C4715: “operator<<<int>”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(259,1): warning C4715: “Share_Stack<int>::Push”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(281,1): warning C4715: “Share_Stack<int>::Pop”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(196,1): warning C4715: “Share_Stack<int>::IsEmpty”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Share_Stack.h(235,1): warning C4715: “Share_Stack<int>::GetTop”: 不是所有的控件路径都返回值
   Stack and Queue.vcxproj -> D:\Visual Studio 2022\source\repos\Stack and Queue\x64\Debug\Stack and Queue.exe

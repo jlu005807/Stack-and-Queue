@@ -112,6 +112,7 @@ public:
 	{
 		this->capcity = 0;
 		delete[]base;
+		base = nullptr;
 
 	}
 
