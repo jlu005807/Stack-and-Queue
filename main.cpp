@@ -2,6 +2,8 @@
 #include"Stack_Link.h"
 #include"Share_Stack.h"
 #include"Queue_Stack.h"
+#include"Queue_Seq.h"
+
 
 int main()
 {
@@ -97,7 +99,7 @@ int main()
 	system("Pause");*/
 
 	//Ä£Äâ¶ÓÁÐ
-	int a[9] = { 1,2,3,4,5,6,7,8,9 };
+	/*int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Queue_Stack<int> one(a, 9);
 
@@ -125,9 +127,36 @@ int main()
 
 	std::cout << two;
 
+	system("pause");*/
+
+    //Ë³ÐòÕ»
+
+    int a[9] = { 1,2,3,4,5,6,7,8,9 };
+
+	Queue_Seq<int> one(a, 9);
+
+	one.DeQueue();
+
+	one.EnQueue(55);
+
+	std::cout << one;
+
 	system("pause");
 
+	Queue_Seq<int> two = one;
+
+	std::cout << two;
+
+	one.DeQueue();
+
+	std::cout << one;
+
+	system("Pause");
+
+	two = one;
 	
-	
+	std::cout << two;
+
+	system("Pause");
 
 }

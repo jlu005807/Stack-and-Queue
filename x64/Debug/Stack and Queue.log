@@ -1,7 +1,4 @@
 ﻿  main.cpp
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Queue_Stack.h(183,1): warning C4715: “Queue_Stack<int>::DeQueue”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Queue_Stack.h(128,1): warning C4715: “Queue_Stack<int>::QueueFull”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Queue_Stack.h(40,1): warning C4715: “Queue_Stack<int>::operator=”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(164,1): warning C4715: “Stack_Seq<int>::GetTop”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(87,1): warning C4715: “Stack_Seq<int>::InitStack_from_Stack”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Queue_Seq.h(158,1): warning C4715: “Queue_Seq<int>::DeQueue”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Queue_Seq.h(144,1): warning C4715: “Queue_Seq<int>::EnQueue”: 不是所有的控件路径都返回值
   Stack and Queue.vcxproj -> D:\Visual Studio 2022\source\repos\Stack and Queue\x64\Debug\Stack and Queue.exe
