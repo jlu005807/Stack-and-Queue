@@ -71,9 +71,18 @@ public:
 
 		if (!base)
 		{
+			std::cout << "Memory allocation failed" << std::endl;
 			throw std::exception();
 		}
 
+		this->top = this->base;
+
+		T* p = other.base;
+
+		for (p; p != other.top; p++)
+		{
+			*(this->top++) = *p;
+		}
 		
 	}
 
@@ -85,6 +94,7 @@ public:
 
 		if (!base)
 		{
+			std::cout << "Memory allocation failed" << std::endl;
 			throw std::exception();
 		}
 
@@ -101,7 +111,8 @@ public:
 		this->base = new T[this->capcity];
 		if (!base)
 		{
-			exit(OVERFLOW);
+			std::cout << "Memory allocation failed" << std::endl;
+			throw std::exception();
 		}
 		this->top = base;
 		
@@ -166,17 +177,20 @@ public:
 		}
 	}
 
-	bool Pop(T* e = nullptr)
+	T Pop()
 	{
-		if (IsEmpty())return false;
+		if (IsEmpty())
+		{
+			std::cout << "Stack is empty" << std::endl;
+			throw std::exception();
+		}
 		else
 		{
-			if(e)
-			{
-				e = &GetTop();
-			}
+			T e = GetTop();
+
 			top--;
-			return true;
+
+			return e;
 		}
 
 	}

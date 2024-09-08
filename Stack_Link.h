@@ -59,6 +59,7 @@ public:
 
 			if (!p)
 			{
+				std::cout << "Memory allocation failed" << std::endl;
 				throw std::exception();
 			}
 
@@ -147,6 +148,7 @@ public:
 		
 		if (!p)
 		{
+			std::cout << "Memory allocation failed" << std::endl;
 			throw std::exception();
 		}
 
@@ -156,18 +158,16 @@ public:
 		this->size++;//大小加一
 	}
 
-	void Pop(T* e = nullptr)
+	T Pop()
 	{
 		if (IsEmpty())
 		{
+			std::cout << "Stack is empty" << std::endl;
 			throw std::exception();
 		}
 		else
 		{
-			if (e != nullptr)
-			{
-				e = &GetTop();
-			}
+			T p = GetTop();
 			//后移Top
 			Stack_Node<T>* p = this->top;
 			this->top = this->top->next;
@@ -175,6 +175,7 @@ public:
 			delete p;
 			this->size--;
 
+			return p;
 		}
 	}
 

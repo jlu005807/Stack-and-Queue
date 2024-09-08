@@ -53,7 +53,7 @@ public:
 
 	}
 
-	bool DeQueue(T* e = nullptr)
+	T DeQueue()
 	{
 
 	}

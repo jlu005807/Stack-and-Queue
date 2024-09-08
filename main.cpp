@@ -1,6 +1,7 @@
 #include"Stack_Seq.h"
 #include"Stack_Link.h"
 #include"Share_Stack.h"
+#include"Queue_Stack.h"
 
 int main()
 {
@@ -67,7 +68,7 @@ int main()
 
 
 	//共享栈
-	int a[9] = { 1,2,3,4,5,6,7,8,9 };
+	/*int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Share_Stack<int> one(a, 9);
 
@@ -93,6 +94,40 @@ int main()
 
 	std::cout << two;
 
-	system("Pause");
+	system("Pause");*/
+
+	//模拟队列
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
+
+	Queue_Stack<int> one(a, 9);
+
+	one.DeQueue();
+
+	one.EnQueue(55);
+
+	std::cout << one;
+
+	system("pause");
+
+	Queue_Stack<int> two = one;
+
+	std::cout << two;
+
+	system("pause");
+
+	one.EnQueue(44);
+
+	std::cout << one;
+
+	system("pause");
+
+	two = one;
+
+	std::cout << two;
+
+	system("pause");
+
+	
+	
 
 }

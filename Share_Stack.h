@@ -80,6 +80,7 @@ public:
 
 		if (!base)
 		{
+			std::cout << "Memory allocation failed" << std::endl;
 			throw std::exception();
 		}
 
@@ -109,6 +110,7 @@ public:
 
 		if (!base)
 		{
+			std::cout << "Memory allocation failed" << std::endl;
 			throw std::exception();
 		}
 
@@ -128,7 +130,8 @@ public:
 		this->base = new T[this->capcity];
 		if (!base)
 		{
-			exit(OVERFLOW);
+			std::cout << "Memory allocation failed" << std::endl;
+			throw std::exception();
 		}
 		this->top[0] = -1;
 		this->top[1] = this->capcity;
@@ -219,6 +222,7 @@ public:
 	{
 		if (IsEmpty(i))
 		{
+			std::cout << "Stack is empty" << std::endl;
 			throw std::exception();
 		}
 		else
@@ -258,15 +262,16 @@ public:
 		}
 	}
 
-	bool Pop(int i=0,T * e = nullptr)
+	T Pop(int i=0)
 	{
-		if (IsEmpty(i))return false;
+		if (IsEmpty(i))
+		{
+			std::cout << "Stack is empty" << std::endl;
+			throw std::exception();
+		}
 		else
 		{
-			if (e)
-			{
-				e = &GetTop(i);
-			}
+			T p = GetTop(i);
 			
 			if (i == 0)
 			{
@@ -276,6 +281,8 @@ public:
 			{
 				this->top[1]++;
 			}
+
+			return p;
 		}
 
 	}

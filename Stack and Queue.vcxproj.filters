@@ -29,7 +29,7 @@
     <ClInclude Include="Stack_Seq.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Queue of Stack.h">
+    <ClInclude Include="Queue_Stack.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Queue_Seq.h">
