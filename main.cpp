@@ -3,7 +3,7 @@
 #include"Share_Stack.h"
 #include"Queue_Stack.h"
 #include"Queue_Seq.h"
-
+#include"Queue_Link.h"
 
 int main()
 {
@@ -129,9 +129,9 @@ int main()
 
 	system("pause");*/
 
-    //顺序栈
+    //顺序队列
 
-    int a[9] = { 1,2,3,4,5,6,7,8,9 };
+    /*int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Queue_Seq<int> one(a, 9);
 
@@ -157,6 +157,34 @@ int main()
 	
 	std::cout << two;
 
+	system("Pause");*/
+
+    //链表队列
+    int a[9] = { 1,2,3,4,5,6,7,8,9 };
+
+    Queue_Link<int> one(a, 9);
+
+	one.DeQueue();
+
+	one.EnQueue(11);
+
+	std::cout << one;
+
+	system("pause");
+
+	Queue_Link<int> two = one;
+
+	std::cout << two;
+
+	one.DeQueue();
+
+	std::cout << one;
+
 	system("Pause");
 
+	two = one;
+
+	std::cout << two;
+
+	system("Pause");
 }
