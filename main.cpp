@@ -4,6 +4,11 @@
 #include"Queue_Stack.h"
 #include"Queue_Seq.h"
 #include"Queue_Link.h"
+#include"Postfix.h"
+#include<string>
+#include<cctype>
+
+
 
 int main()
 {
@@ -160,7 +165,7 @@ int main()
 	system("Pause");*/
 
     //¡¥±Ì∂”¡–
-    int a[9] = { 1,2,3,4,5,6,7,8,9 };
+    /*int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
     Queue_Link<int> one(a, 9);
 
@@ -186,5 +191,19 @@ int main()
 
 	std::cout << two;
 
-	system("Pause");
+	system("Pause");*/
+
+    std::string s;
+
+	std::cin >> s;
+
+	Postfix one(s);
+	
+
+	std::cout << one.postfix <<" = "<<one.result<< std::endl;
+
+	system("pause");
+
+
+
 }

@@ -8,7 +8,7 @@ class Queue_Stack
 public:
 	Stack_Seq<T>* S1;
 	Stack_Seq<T>* S2;
-
+	
 	Queue_Stack(int min_capcity)
 	{
 		InitQueue(min_capcity);

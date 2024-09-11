@@ -11,8 +11,9 @@ public:
 	int capcity;
 	T* base;
 	T* top;
+	int size;
 
-	Stack_Seq(int capcity=1):capcity(capcity)
+	Stack_Seq(int capcity=50):capcity(capcity)
 	{
 		InitStack(capcity);
 	}
@@ -40,7 +41,6 @@ public:
 		{
 			delete[]base;
 		}
-
 
 		this->capcity = other.capcity;
 		this->base = new T[this->capcity];
@@ -82,6 +82,7 @@ public:
 		for (p; p != other.top; p++)
 		{
 			*(this->top++) = *p;
+
 		}
 		
 	}
@@ -103,6 +104,8 @@ public:
 		for (int i = 0; i < n; i++)
 		{
 			*(top++) = a[i];
+
+
 		}
 	}
 
@@ -115,7 +118,7 @@ public:
 			throw std::exception();
 		}
 		this->top = base;
-		
+
 		return true;
 	}
 
@@ -123,18 +126,20 @@ public:
 	{
 		this->capcity = 0;
 		delete[]base;
-		base = nullptr;
+		top=base = nullptr;
+
 
 	}
 
 	void ClearStack()
 	{
 		this->top = this->base;
+		size = 0;
 	}
 
 	bool IsEmpty()const
 	{
-		if (this->top == this->base)
+		if (this->top==this->base)
 		{
 			return true;
 		}
@@ -146,13 +151,13 @@ public:
 
 	bool IsFull()const
 	{
-		if (this->top - this->base == this->capcity)return true;
+		if (this->top-this->base == this->capcity)return true;
 		else return false;
 	}
 
 	int StackLength()const
 	{
-		return (top - base);
+		return this->top - this->base;
 	}
 
 	T& GetTop()
