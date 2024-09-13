@@ -203,7 +203,7 @@ std::ostream& operator<<(std::ostream& out, const Stack_Link<K>& other)
 			ptr = ptr->next;
 		}
 
-		out << ptr->m_data << std::endl;
+		out << ptr->m_data;
 
 		return out;
 

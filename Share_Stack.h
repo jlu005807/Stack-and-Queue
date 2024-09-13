@@ -308,7 +308,7 @@ std::ostream& operator<<(std::ostream& out, const Share_Stack<K>& other)
 		out << "Stack_0:" << std::endl;
 		for (int i = other.top[0]; i > 0; i--)
 			out << other.base[i] << " ";
-		out << other.base[0] << std::endl;
+		out << other.base[0];
 	}
 
 	if (other.IsEmpty(1))
@@ -320,6 +320,6 @@ std::ostream& operator<<(std::ostream& out, const Share_Stack<K>& other)
 		out << "Stack_1:" << std::endl;
 		for (int i = other.top[1]; i<other.capcity-1; i++)
 			out << other.base[i] << " ";
-		out << other.base[other.capcity-1] << std::endl;
+		out << other.base[other.capcity-1];
 	}
 }

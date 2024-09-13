@@ -177,7 +177,6 @@ std::ostream& operator<<(std::ostream& out, const Queue_Seq<K>& other)
 		out << other.element[i] << " ";
 		i = (i + other.capcity + 1) % other.capcity;
 	}
-	out << std::endl;
 
 	return out;
 }

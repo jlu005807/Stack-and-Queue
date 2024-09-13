@@ -219,7 +219,7 @@ std::ostream& operator<<(std::ostream& out, const Stack_Seq<K>& other)
 		out << *p<<" ";
 	}
 
-	out << *p<<std::endl;
+	out << *p;
 
 	return out;
 }

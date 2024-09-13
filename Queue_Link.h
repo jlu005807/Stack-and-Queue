@@ -107,6 +107,7 @@ public:
 	void DestroyQueue()
 	{
 		ClearQueue();
+
 		delete front;
 
 		front = rear = nullptr;
@@ -216,7 +217,6 @@ std::ostream& operator<<(std::ostream& out, const Queue_Link<K>& other)
 		p = p->next;
 	}
 
-	out << std::endl;
 
 	return out;
 	
