@@ -130,6 +130,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Monotone_Queue.h" />
+    <ClInclude Include="Monotone_Stack.h" />
     <ClInclude Include="Postfix.h" />
     <ClInclude Include="Queue_Stack.h" />
     <ClInclude Include="Queue_Link.h" />

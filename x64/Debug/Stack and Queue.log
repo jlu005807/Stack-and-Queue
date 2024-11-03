@@ -5,8 +5,8 @@ D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Postfix.h(118
 D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Postfix.h(127,51): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Postfix.h(128,50): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Postfix.h(129,44): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(169,1): warning C4715: “Stack_Seq<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::GetTop”: 不是所有的控件路径都返回值
 D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Postfix.h(122,1): warning C4715: “Postfix::calculate”: 不是所有的控件路径都返回值
-D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(169,1): warning C4715: “Stack_Seq<char>::GetTop”: 不是所有的控件路径都返回值
 D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(169,1): warning C4715: “Stack_Seq<int>::GetTop”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(169,1): warning C4715: “Stack_Seq<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::GetTop”: 不是所有的控件路径都返回值
+D:\Visual Studio 2022\source\repos\Stack and Queue\Stack and Queue\Stack_Seq.h(169,1): warning C4715: “Stack_Seq<char>::GetTop”: 不是所有的控件路径都返回值
   Stack and Queue.vcxproj -> D:\Visual Studio 2022\source\repos\Stack and Queue\x64\Debug\Stack and Queue.exe

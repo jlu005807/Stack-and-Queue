@@ -8,16 +8,14 @@
 #include<string>
 #include<cctype>
 
-
-
-int main()
+//顺序栈
+void TestStack_Seq()
 {
-	//顺序栈
-	/*int a[9] = { 1,2,3,4,5,6,7,8,9 };
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Stack_Seq<int> one(a, 9);
 
-	std::cout <<one;
+	std::cout << one;
 
 	system("Pause");
 
@@ -39,13 +37,15 @@ int main()
 
 	std::cout << two;
 
-	system("pause");*/
+	system("pause");
+}
 
-	//链表栈
-	/*int a[9] = { 1,2,3,4,5,6,7,8,9 };
+//链表栈
+void TestStack_Link()
+{
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Stack_Link<int> one(a, 9);
-	
 
 	one.Pop();
 
@@ -71,11 +71,14 @@ int main()
 
 	std::cout << two;
 
-	system("Pause");*/
+	system("Pause");
 
+}
 
-	//共享栈
-	/*int a[9] = { 1,2,3,4,5,6,7,8,9 };
+//共享栈
+void TestShare_Stack()
+{
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Share_Stack<int> one(a, 9);
 
@@ -101,10 +104,13 @@ int main()
 
 	std::cout << two;
 
-	system("Pause");*/
+	system("Pause");
+}
 
-	//模拟队列
-	/*int a[9] = { 1,2,3,4,5,6,7,8,9 };
+//模拟队列
+void TestQueue_Stack()
+{
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Queue_Stack<int> one(a, 9);
 
@@ -132,11 +138,13 @@ int main()
 
 	std::cout << two;
 
-	system("pause");*/
+	system("pause");
+}
 
-    //顺序队列
-
-    /*int a[9] = { 1,2,3,4,5,6,7,8,9 };
+//顺序队列
+void TestQueue_Seq()
+{
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
 	Queue_Seq<int> one(a, 9);
 
@@ -159,15 +167,18 @@ int main()
 	system("Pause");
 
 	two = one;
-	
+
 	std::cout << two;
 
-	system("Pause");*/
+	system("Pause");
+}
 
-    //链表队列
-    /*int a[9] = { 1,2,3,4,5,6,7,8,9 };
+//链表队列
+void TestQueue_Link()
+{
+	int a[9] = { 1,2,3,4,5,6,7,8,9 };
 
-    Queue_Link<int> one(a, 9);
+	Queue_Link<int> one(a, 9);
 
 	one.DeQueue();
 
@@ -191,19 +202,38 @@ int main()
 
 	std::cout << two;
 
-	system("Pause");*/
+	system("Pause");
+}
 
-    std::string s;
+//表达式栈
+void TestPostfix()
+{
+	std::string s;
 
 	std::cin >> s;
 
 	Postfix one(s);
-	
 
-	std::cout << one.postfix <<" = "<<one.result<< std::endl;
+
+	std::cout << one.postfix << " = " << one.result << std::endl;
 
 	system("pause");
+}
 
+int main()
+{
+	TestStack_Seq();
 
+	TestStack_Link();
 
+	TestShare_Stack();
+
+	TestQueue_Stack();
+
+	TestQueue_Seq();
+
+	TestQueue_Link();
+
+	TestPostfix();
+	
 }

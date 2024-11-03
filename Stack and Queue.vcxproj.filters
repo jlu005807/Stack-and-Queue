@@ -41,5 +41,11 @@
     <ClInclude Include="Postfix.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Monotone_Stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Monotone_Queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

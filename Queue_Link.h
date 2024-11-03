@@ -200,12 +200,13 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, const Queue_Link<K>& other);
 };
 
+
 template<class K>
 std::ostream& operator<<(std::ostream& out, const Queue_Link<K>& other)
-{
+{                                                                                                                                                                                                                                                                         
 	if (other.QueueEmpty())
 	{
-		std::cout << "Queue is empty" << std::endl;
+		out << "Queue is empty" << std::endl;
 		return out;
 	}
 

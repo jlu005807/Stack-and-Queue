@@ -1,10 +1,6 @@
 #pragma once
 #include<iostream>
 
-#pragma once
-#include<iostream>
-
-
 
 template<class T>
 class Stack_Node
@@ -12,6 +8,10 @@ class Stack_Node
 public:
 	T m_data;
 	Stack_Node* next;
+
+	Stack_Node() = default;
+
+	Stack_Node(T data):m_data(data),next(nullptr){ }
 };
 
 template<class T>
@@ -173,6 +173,7 @@ public:
 			this->top = this->top->next;
 			//É¾³ý
 			delete p;
+
 			this->size--;
 
 			return p;

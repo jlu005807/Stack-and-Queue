@@ -8,9 +8,9 @@ template<class T>
 class Stack_Seq
 {
 public:	
-	int capcity;
-	T* base;
-	T* top;
+	int capcity;//ÈÝÁ¿
+	T* base;//´æ·ÅÔªËØ
+	int top;//Õ»¶¥Ö¸Õë
 	int size;
 
 	Stack_Seq(int capcity=50):capcity(capcity)
@@ -43,6 +43,7 @@ public:
 		}
 
 		this->capcity = other.capcity;
+
 		this->base = new T[this->capcity];
 
 		if (!base)
@@ -50,13 +51,11 @@ public:
 			throw std::exception();
 		}
 
-		this->top = this->base;
+		top = 0;
 
-		T* p = other.base;
-
-		for (p; p != other.top; p++)
+		for (int i = 0; i < other.size; i++)
 		{
-			*(this->top++) = *p;
+			this->base[top++] = other.base[i];
 		}
 
 		return *this;
@@ -77,14 +76,14 @@ public:
 
 		this->top = this->base;
 
-		T* p = other.base;
+		top = 0;
 
-		for (p; p != other.top; p++)
+		for (int i = 0; i < other.size; i++)
 		{
-			*(this->top++) = *p;
-
+			this->base[top++] = other.base[i];
 		}
-		
+
+		return true;
 	}
 
 	void InitStack_from_array(T a[],int n)
@@ -99,13 +98,9 @@ public:
 			throw std::exception();
 		}
 
-		this->top = this->base;
-
 		for (int i = 0; i < n; i++)
 		{
-			*(top++) = a[i];
-
-
+			base[top++] = a[i];
 		}
 	}
 
@@ -117,7 +112,8 @@ public:
 			std::cout << "Memory allocation failed" << std::endl;
 			throw std::exception();
 		}
-		this->top = base;
+		
+		top = 0;
 
 		return true;
 	}
@@ -126,20 +122,20 @@ public:
 	{
 		this->capcity = 0;
 		delete[]base;
-		top=base = nullptr;
-
-
+		base = nullptr;
+		top = 0;
 	}
 
 	void ClearStack()
 	{
-		this->top = this->base;
+		//Âß¼­É¾³ý
+		top = 0;
 		size = 0;
 	}
 
 	bool IsEmpty()const
 	{
-		if (this->top==this->base)
+		if (top==0)
 		{
 			return true;
 		}
@@ -151,25 +147,24 @@ public:
 
 	bool IsFull()const
 	{
-		if (this->top-this->base == this->capcity)return true;
+		if (top==capcity)return true;
 		else return false;
 	}
 
 	int StackLength()const
 	{
-		return this->top - this->base;
+		return top;
 	}
 
 	T& GetTop()
 	{
 		if (!IsEmpty())
 		{
-			return *(top-1);
+			return base[top-1];
 		}
 	}
 
 	bool Push(T e)
-
 	{
 		if (IsFull())
 		{
@@ -177,7 +172,7 @@ public:
 		}
 		else
 		{
-			*(this->top++) = e;
+			base[top++] = e;
 			return true;
 		}
 	}
@@ -207,19 +202,18 @@ public:
 template<class K>
 std::ostream& operator<<(std::ostream& out, const Stack_Seq<K>& other)
 {
-	if (other.base==other.top)
+	if (other.top==0)
 	{
 		out << "Stack is empty" << std::endl;
 		return out;
 	}
-	K* p = other.top-1;
 
-	for (p; p != other.base; p--)
+	for (int i = other.top - 1; i > 0; i--)
 	{
-		out << *p<<" ";
+		out << other.base[i] << " ";
 	}
 
-	out << *p;
+	out << other.base[0];
 
 	return out;
 }
